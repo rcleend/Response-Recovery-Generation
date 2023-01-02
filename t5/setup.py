@@ -20,8 +20,8 @@ from trainer import T5Trainer
 
 
 model_params = {
-    "MODEL": "t5-base",  # model_type: t5-base/t5-large
-    "TRAIN_BATCH_SIZE": 256,  # training batch size
+    "MODEL": "t5-small",  # model_type: t5-base/t5-large
+    "TRAIN_BATCH_SIZE": 32,  # training batch size
     "VALID_BATCH_SIZE": 8,  # validation batch size
     "TRAIN_EPOCHS": 3,  # number of training epochs
     "VAL_EPOCHS": 1,  # number of validation epochs

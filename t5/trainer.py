@@ -71,6 +71,7 @@ def validate(epoch, tokenizer, model, device, loader):
   model.eval()
   predictions = []
   actuals = []
+  templates = []
   with torch.no_grad():
       for _, data in enumerate(loader, 0):
           y = data['target_ids'].to(device, dtype = torch.long)
@@ -80,20 +81,25 @@ def validate(epoch, tokenizer, model, device, loader):
           generated_ids = model.generate(
               input_ids = ids,
               attention_mask = mask, 
-              max_length=200, 
+              max_length=model['MAX_TARGET_TEXT_LENGTH'], 
               num_beams=4,
               repetition_penalty=2.5, 
               length_penalty=0.6, 
               early_stopping=True
               )
+
           preds = [tokenizer.decode(g, skip_special_tokens=True, clean_up_tokenization_spaces=True) for g in generated_ids]
           target = [tokenizer.decode(t, skip_special_tokens=True, clean_up_tokenization_spaces=True)for t in y]
+          template = [tokenizer.decode(t, skip_special_tokens=True, clean_up_tokenization_spaces=True)for t in ids]
+
           if _%10==0:
               console.print(f'Completed {_}')
 
           predictions.extend(preds)
           actuals.extend(target)
-  return predictions, actuals
+          templates.extend(template)
+
+  return predictions, actuals, templates
 
 def train(epoch, tokenizer, model, device, loader, optimizer):
     """
@@ -207,13 +213,18 @@ def T5Trainer(
     model.save_pretrained(path)
     tokenizer.save_pretrained(path)
 
-    # evaluating test dataset
+    # Print test and train predictions
     console.log(f"[Initiating Validation]...\n")
     for epoch in range(model_params["VAL_EPOCHS"]):
-        predictions, actuals = validate(epoch, tokenizer, model, device, val_loader)
-        final_df = pd.DataFrame({"Generated Text": predictions, "Actual Text": actuals})
-        final_df.to_csv(os.path.join(output_dir, "predictions.csv"))
+        test_predictions, test_actuals, test_templates = validate(epoch, tokenizer, model, device, val_loader)
+        test_final_df = pd.DataFrame({"Generated Text": test_predictions, "Actual Text": test_actuals, "Orig. Template": test_templates})
+        test_final_df.to_csv(os.path.join(output_dir, "test_predictions.csv"))
 
+        train_predictions, train_actuals, train_templates = validate(epoch, tokenizer, model, device, training_loader)
+        train_final_df = pd.DataFrame({"Generated Text": train_predictions, "Actual Text": train_actuals, "Orig. Template" : train_templates})
+        train_final_df.to_csv(os.path.join(output_dir, "train_predictions.csv"))
+
+        
     console.save_text(os.path.join(output_dir, "logs.txt"))
 
     console.log(f"[Validation Completed.]\n")
