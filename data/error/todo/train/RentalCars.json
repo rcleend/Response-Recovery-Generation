@@ -1,0 +1,678 @@
+[
+    {
+        "services": [
+            "RentalCars"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Diridon Station"
+                                ],
+                                "slot": "pickup_location",
+                                "values": [
+                                    "Diridon Station"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2019-03-12"
+                                ],
+                                "slot": "pickup_date",
+                                "values": [
+                                    "March 12th"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "18:30"
+                                ],
+                                "slot": "pickup_time",
+                                "values": [
+                                    "6:30 pm"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "2019-03-13"
+                                ],
+                                "slot": "dropoff_date",
+                                "values": [
+                                    "March 13th"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "Compact"
+                                ],
+                                "slot": "type",
+                                "values": [
+                                    "Compact"
+                                ]
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 73,
+                                "slot": "pickup_location",
+                                "start": 58
+                            },
+                            {
+                                "exclusive_end": 87,
+                                "slot": "pickup_date",
+                                "start": 77
+                            },
+                            {
+                                "exclusive_end": 98,
+                                "slot": "pickup_time",
+                                "start": 91
+                            },
+                            {
+                                "exclusive_end": 143,
+                                "slot": "dropoff_date",
+                                "start": 133
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Please confirm that you are picking up a compact car from Diridon Station on March 12th at 6:30 pm. You will be returning the car on March 13th."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveCar",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "dropoff_date": [
+                                    "March 13th"
+                                ],
+                                "pickup_city": [
+                                    "San Jose"
+                                ],
+                                "pickup_date": [
+                                    "March 12th",
+                                    "the 12th"
+                                ],
+                                "pickup_location": [
+                                    "Diridon Station"
+                                ],
+                                "pickup_time": [
+                                    "6:30 pm",
+                                    "half past 6 in the evening"
+                                ],
+                                "type": [
+                                    "Compact"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "Compact"
+                                ],
+                                "slot": "type",
+                                "values": [
+                                    "Compact"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "RentalCars"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "ReserveCar"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveCar"
+                                ]
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Are you like to book this car?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveCar",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "dropoff_date": [
+                                    "2nd of this month"
+                                ],
+                                "pickup_city": [
+                                    "walnut creek"
+                                ],
+                                "pickup_date": [
+                                    "1st of march",
+                                    "March 1st"
+                                ],
+                                "pickup_location": [
+                                    "BART Station"
+                                ],
+                                "pickup_time": [
+                                    "three in the afternoon"
+                                ],
+                                "type": [
+                                    "Standard"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "ReserveCar"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveCar"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "RentalCars"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Homes_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Do you need more help?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "THANK_YOU",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Homes_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "area": [
+                                    "San Jose"
+                                ],
+                                "number_of_beds": [
+                                    "2"
+                                ],
+                                "property_name": [
+                                    "Aegena"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "RentalCars"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "REQUEST",
+                                "canonical_values": [],
+                                "slot": "pickup_date",
+                                "values": []
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "pickup_time",
+                                "values": []
+                            },
+                            {
+                                "act": "REQUEST",
+                                "canonical_values": [],
+                                "slot": "pickup_city",
+                                "values": []
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "What is the time and location of pick up?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "18:30"
+                                ],
+                                "slot": "pickup_time",
+                                "values": [
+                                    "half past 6 in the evening"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-12"
+                                ],
+                                "slot": "pickup_date",
+                                "values": [
+                                    "the 12th"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "San Jose"
+                                ],
+                                "slot": "pickup_city",
+                                "values": [
+                                    "San Jose"
+                                ]
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 100,
+                                "slot": "pickup_time",
+                                "start": 74
+                            },
+                            {
+                                "exclusive_end": 38,
+                                "slot": "pickup_date",
+                                "start": 30
+                            },
+                            {
+                                "exclusive_end": 50,
+                                "slot": "pickup_city",
+                                "start": 42
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "GetCarsAvailable",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "dropoff_date": [
+                                    "14th of this month"
+                                ],
+                                "pickup_city": [
+                                    "San Jose"
+                                ],
+                                "pickup_date": [
+                                    "the 12th"
+                                ],
+                                "pickup_time": [
+                                    "half past 6 in the evening"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I'll be picking the car up on the 12th in San Jose. I'll need it around a [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "pickup_time",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-12"
+                                ],
+                                "slot": "pickup_date",
+                                "values": [
+                                    "the 12th"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "San Jose"
+                                ],
+                                "slot": "pickup_city",
+                                "values": [
+                                    "San Jose"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "RentalCars"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "OFFER",
+                                "canonical_values": [
+                                    "Diridon Station"
+                                ],
+                                "slot": "pickup_location",
+                                "values": [
+                                    "Diridon Station"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "2019-03-12"
+                                ],
+                                "slot": "pickup_date",
+                                "values": [
+                                    "March 12th"
+                                ]
+                            },
+                            {
+                                "act": "OFFER",
+                                "canonical_values": [
+                                    "Standard"
+                                ],
+                                "slot": "type",
+                                "values": [
+                                    "Standard"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "Civic"
+                                ],
+                                "slot": "car_name",
+                                "values": [
+                                    "Civic"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_COUNT",
+                                "canonical_values": [
+                                    "4"
+                                ],
+                                "slot": "count",
+                                "values": [
+                                    "4"
+                                ]
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "service_call": {
+                            "method": "GetCarsAvailable",
+                            "parameters": {
+                                "dropoff_date": "2019-03-14",
+                                "pickup_city": "San Jose",
+                                "pickup_date": "2019-03-12",
+                                "pickup_time": "18:30"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "car_name": "Civic",
+                                "dropoff_date": "2019-03-14",
+                                "pickup_city": "San Jose",
+                                "pickup_date": "2019-03-12",
+                                "pickup_location": "Diridon Station",
+                                "pickup_time": "18:30",
+                                "total_price": "70",
+                                "type": "Standard"
+                            },
+                            {
+                                "car_name": "Corolla",
+                                "dropoff_date": "2019-03-14",
+                                "pickup_city": "San Jose",
+                                "pickup_date": "2019-03-12",
+                                "pickup_location": "Diridon Station",
+                                "pickup_time": "18:30",
+                                "total_price": "66",
+                                "type": "Standard"
+                            },
+                            {
+                                "car_name": "Cruze",
+                                "dropoff_date": "2019-03-14",
+                                "pickup_city": "San Jose",
+                                "pickup_date": "2019-03-12",
+                                "pickup_location": "Diridon Station",
+                                "pickup_time": "18:30",
+                                "total_price": "66",
+                                "type": "Standard"
+                            },
+                            {
+                                "car_name": "Elantra",
+                                "dropoff_date": "2019-03-14",
+                                "pickup_city": "San Jose",
+                                "pickup_date": "2019-03-12",
+                                "pickup_location": "Diridon Station",
+                                "pickup_time": "18:30",
+                                "total_price": "64",
+                                "type": "Standard"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 122,
+                                "slot": "pickup_location",
+                                "start": 107
+                            },
+                            {
+                                "exclusive_end": 103,
+                                "slot": "pickup_date",
+                                "start": 93
+                            },
+                            {
+                                "exclusive_end": 67,
+                                "slot": "car_name",
+                                "start": 62
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "I've located 4 cars I think you may like. There is a Standard Civic available for pick up on March 12th at Diridon Station."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "total_price",
+                                "values": []
+                            }
+                        ],
+                        "service": "RentalCars_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "GetCarsAvailable",
+                            "requested_slots": [
+                                "total_price"
+                            ],
+                            "slot_values": {
+                                "dropoff_date": [
+                                    "14th of this month"
+                                ],
+                                "pickup_city": [
+                                    "San Jose"
+                                ],
+                                "pickup_date": [
+                                    "March 12th",
+                                    "the 12th"
+                                ],
+                                "pickup_time": [
+                                    "half past 6 in the evening"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "2019-03-12"
+                                ],
+                                "slot": "pickup_date",
+                                "values": [
+                                    "March 12th"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "total_price",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

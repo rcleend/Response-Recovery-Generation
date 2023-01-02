@@ -1,0 +1,737 @@
+[
+    {
+        "services": [
+            "Restaurant"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [],
+                                "slot": "location",
+                                "values": []
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sure, which city?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Roxie Theater"
+                                ],
+                                "slot": "theater_name",
+                                "values": [
+                                    "Roxie Theater"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "location",
+                                "values": [
+                                    "San Fran"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 31,
+                                "slot": "theater_name",
+                                "start": 18
+                            },
+                            {
+                                "exclusive_end": 43,
+                                "slot": "location",
+                                "start": 35
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindMovies",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "San Fran"
+                                ],
+                                "theater_name": [
+                                    "Roxie Theater"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I'd like to go to Roxie Theater in [NON UNDERSTANDING] actually."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [],
+                                "slot": "location",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Roxie Theater"
+                                ],
+                                "slot": "theater_name",
+                                "values": [
+                                    "Roxie Theater"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Restaurant"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Absinthe Brasserie & Bar"
+                                ],
+                                "slot": "restaurant_name",
+                                "values": [
+                                    "Absinthe Brasserie & Bar"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "city",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "17:30"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "5:30 pm"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "party_size",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "2019-03-07"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 7th"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 56,
+                                "slot": "restaurant_name",
+                                "start": 32
+                            },
+                            {
+                                "exclusive_end": 73,
+                                "slot": "city",
+                                "start": 60
+                            },
+                            {
+                                "exclusive_end": 84,
+                                "slot": "time",
+                                "start": 77
+                            },
+                            {
+                                "exclusive_end": 97,
+                                "slot": "date",
+                                "start": 88
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Okay, you want a table for 2 at Absinthe Brasserie & Bar in San Francisco at 5:30 pm on March 7th?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "snacks"
+                                ],
+                                "date": [
+                                    "March 7th"
+                                ],
+                                "party_size": [
+                                    "2"
+                                ],
+                                "restaurant_name": [
+                                    "Absinthe Brasserie & Bar"
+                                ],
+                                "serves_alcohol": [
+                                    "True"
+                                ],
+                                "time": [
+                                    "5:30 pm"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "2019-03-07"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 7th"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Restaurant"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NOTIFY_FAILURE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "service_call": {
+                            "method": "ReserveRestaurant",
+                            "parameters": {
+                                "city": "San Francisco",
+                                "date": "2019-03-08",
+                                "party_size": "1",
+                                "restaurant_name": "Bissap Baobab",
+                                "time": "16:30"
+                            }
+                        },
+                        "service_results": [],
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, I couldn't make the reservation because it's full. Anything else I can do?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "party_size",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "17:00"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "five in the evening"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 50,
+                                "slot": "time",
+                                "start": 31
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "San Fran",
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "African"
+                                ],
+                                "date": [
+                                    "March 8th"
+                                ],
+                                "party_size": [
+                                    "2"
+                                ],
+                                "restaurant_name": [
+                                    "Bissap Baobab"
+                                ],
+                                "time": [
+                                    "five in the evening"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "party_size",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "17:00"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "five in the evening"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Restaurant"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "BuyMovieTickets"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BuyMovieTickets"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Should I get you some seats?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "Campbell"
+                                ],
+                                "movie_name": [
+                                    "Dumbo"
+                                ],
+                                "show_type": [
+                                    "imax"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "BuyMovieTickets"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BuyMovieTickets"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Restaurant"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "Absinthe Brasserie & Bar"
+                                ],
+                                "slot": "restaurant_name",
+                                "values": [
+                                    "Absinthe Brasserie & Bar"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "city",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_COUNT",
+                                "canonical_values": [
+                                    "10"
+                                ],
+                                "slot": "count",
+                                "values": [
+                                    "10"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "service_call": {
+                            "method": "FindRestaurants",
+                            "parameters": {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "serves_alcohol": "True"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-551-1590",
+                                "price_range": "expensive",
+                                "restaurant_name": "Absinthe Brasserie & Bar",
+                                "serves_alcohol": "True",
+                                "street_address": "398 Hayes Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-252-1036",
+                                "price_range": "moderate",
+                                "restaurant_name": "Aperto",
+                                "serves_alcohol": "True",
+                                "street_address": "1434 18th Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-416-6989",
+                                "price_range": "moderate",
+                                "restaurant_name": "Barrel Head Brewhouse",
+                                "serves_alcohol": "True",
+                                "street_address": "1785 Fulton Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-546-4134",
+                                "price_range": "moderate",
+                                "restaurant_name": "Chez Papa Resto",
+                                "serves_alcohol": "True",
+                                "street_address": "4 Mint Plaza"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-722-9109",
+                                "price_range": "inexpensive",
+                                "restaurant_name": "Chief Sullivan's",
+                                "serves_alcohol": "True",
+                                "street_address": "622 Green Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-440-4500",
+                                "price_range": "expensive",
+                                "restaurant_name": "La Urbana",
+                                "serves_alcohol": "True",
+                                "street_address": "661 Divisadero Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-861-0198",
+                                "price_range": "moderate",
+                                "restaurant_name": "Mission Beach Cafe",
+                                "serves_alcohol": "True",
+                                "street_address": "198 Guerrero Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-692-0211",
+                                "price_range": "moderate",
+                                "restaurant_name": "Red Dog",
+                                "serves_alcohol": "True",
+                                "street_address": "303 2nd Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-241-6833",
+                                "price_range": "moderate",
+                                "restaurant_name": "Revelry Bistro",
+                                "serves_alcohol": "True",
+                                "street_address": "297 Page Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Brunch",
+                                "has_live_music": "False",
+                                "phone_number": "415-924-7478",
+                                "price_range": "expensive",
+                                "restaurant_name": "Ristobar",
+                                "serves_alcohol": "True",
+                                "street_address": "2300 Chestnut Street"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 99,
+                                "slot": "restaurant_name",
+                                "start": 75
+                            },
+                            {
+                                "exclusive_end": 40,
+                                "slot": "city",
+                                "start": 27
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Okay. I found 10 places in San Francisco that provide that. One of them is Absinthe Brasserie & Bar."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "has_live_music",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "FindRestaurants",
+                            "requested_slots": [
+                                "has_live_music"
+                            ],
+                            "slot_values": {
+                                "city": [
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "snacks"
+                                ],
+                                "serves_alcohol": [
+                                    "True"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "Absinthe Brasserie & Bar"
+                                ],
+                                "slot": "restaurant_name",
+                                "values": [
+                                    "Absinthe Brasserie & Bar"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "has_live_music",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

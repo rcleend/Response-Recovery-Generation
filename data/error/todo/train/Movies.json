@@ -1,0 +1,586 @@
+[
+    {
+        "services": [
+            "Movies"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Absinthe Brasserie & Bar"
+                                ],
+                                "slot": "restaurant_name",
+                                "values": [
+                                    "Absinthe Brasserie & Bar"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "city",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "17:30"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "5:30 pm"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "party_size",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2019-03-07"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 7th"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 56,
+                                "slot": "restaurant_name",
+                                "start": 32
+                            },
+                            {
+                                "exclusive_end": 73,
+                                "slot": "city",
+                                "start": 60
+                            },
+                            {
+                                "exclusive_end": 84,
+                                "slot": "time",
+                                "start": 77
+                            },
+                            {
+                                "exclusive_end": 97,
+                                "slot": "date",
+                                "start": 88
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Okay, you want a table for 2 at Absinthe Brasserie & Bar in San Francisco at 5:30 pm on March 7th?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "snacks"
+                                ],
+                                "date": [
+                                    "March 7th"
+                                ],
+                                "party_size": [
+                                    "2"
+                                ],
+                                "restaurant_name": [
+                                    "Absinthe Brasserie & Bar"
+                                ],
+                                "serves_alcohol": [
+                                    "True"
+                                ],
+                                "time": [
+                                    "5:30 pm"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "17:30"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "5:30 pm"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Movies"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "time",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "At what time?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "17:30"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "5:30 pm"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 10,
+                                "slot": "time",
+                                "start": 3
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "snacks"
+                                ],
+                                "date": [
+                                    "March 7th"
+                                ],
+                                "party_size": [
+                                    "2"
+                                ],
+                                "restaurant_name": [
+                                    "Absinthe Brasserie & Bar"
+                                ],
+                                "serves_alcohol": [
+                                    "True"
+                                ],
+                                "time": [
+                                    "5:30 pm"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "At [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "time",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Movies"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Cool. Anything else I can help with?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "FindRestaurants"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "FindRestaurants"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "FindRestaurants",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "San Fran"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "FindRestaurants"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "FindRestaurants"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Movies"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Would you like to make a reservation?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "regular"
+                                ],
+                                "slot": "show_type",
+                                "values": [
+                                    "regular"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_INTENT",
+                                "canonical_values": [
+                                    "GetTimesForMovie"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "GetTimesForMovie"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "GetTimesForMovie",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "San Fran",
+                                    "San Francisco"
+                                ],
+                                "movie_name": [
+                                    "JT LeRoy"
+                                ],
+                                "show_type": [
+                                    "regular"
+                                ],
+                                "theater_name": [
+                                    "Roxie Theater"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "San Fran",
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "African"
+                                ],
+                                "restaurant_name": [
+                                    "Bissap Baobab"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "Not right now. Can you go back and check the regular showtimes for that movie you found?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "regular"
+                                ],
+                                "slot": "show_type",
+                                "values": [
+                                    "regular"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Movies"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "Dogman",
+                                    "Dumbo",
+                                    "Family"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "Dogman",
+                                    "Dumbo",
+                                    "Family"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 19,
+                                "slot": "movie_name",
+                                "start": 13
+                            },
+                            {
+                                "exclusive_end": 26,
+                                "slot": "movie_name",
+                                "start": 21
+                            },
+                            {
+                                "exclusive_end": 38,
+                                "slot": "movie_name",
+                                "start": 32
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "There's also Dogman, Dumbo, and Family."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "SELECT",
+                                "canonical_values": [
+                                    "Dogman"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "Dogman"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 10,
+                                "slot": "movie_name",
+                                "start": 4
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindMovies",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "San Francisco"
+                                ],
+                                "movie_name": [
+                                    "Dogman"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "Oh, [NON UNDERSTANDING] sounds wonderful."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "Dogman",
+                                    "Dumbo",
+                                    "Family"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "Dogman",
+                                    "Dumbo",
+                                    "Family"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

@@ -1,0 +1,623 @@
+[
+    {
+        "services": [
+            "Hotels"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "10:20"
+                                ],
+                                "slot": "departure_time",
+                                "values": [
+                                    "10:20 am"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "32"
+                                ],
+                                "slot": "price",
+                                "values": [
+                                    "$32"
+                                ]
+                            },
+                            {
+                                "act": "NOTIFY_FAILURE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Buses_2",
+                        "service_call": {
+                            "method": "BuyBusTicket",
+                            "parameters": {
+                                "departure_date": "2019-03-11",
+                                "departure_time": "10:15",
+                                "destination": "San Francisco",
+                                "fare_type": "Economy",
+                                "group_size": "3",
+                                "origin": "Fresno"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "departure_date": "2019-03-11",
+                                "departure_time": "10:20",
+                                "destination": "San Francisco",
+                                "destination_station_name": "Salesforce Transit Center",
+                                "fare_type": "Economy",
+                                "group_size": "3",
+                                "origin": "Fresno",
+                                "origin_station_name": "Fresno Station",
+                                "price": "32"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 78,
+                                "slot": "departure_time",
+                                "start": 70
+                            },
+                            {
+                                "exclusive_end": 86,
+                                "slot": "price",
+                                "start": 83
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, I could not get tickets for you. I have another bus leaving at 10:20 am for $32. How about that one?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Buses_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "BuyBusTicket",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "departure_date": [
+                                    "11th of March",
+                                    "March 11th"
+                                ],
+                                "departure_time": [
+                                    "10:20 am"
+                                ],
+                                "destination": [
+                                    "San Francisco"
+                                ],
+                                "fare_type": [
+                                    "Economy"
+                                ],
+                                "group_size": [
+                                    "3"
+                                ],
+                                "origin": [
+                                    "Fresno",
+                                    "Fresno, CA"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "10:20"
+                                ],
+                                "slot": "departure_time",
+                                "values": [
+                                    "10:20 am"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Hotels"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_3",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Is that all?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "THANK_YOU",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_3",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "check_in_date": [
+                                    "1st of March",
+                                    "March 1st"
+                                ],
+                                "check_out_date": [
+                                    "March 3rd",
+                                    "Sunday this week"
+                                ],
+                                "hotel_name": [
+                                    "Airtel Plaza Hotel"
+                                ],
+                                "location": [
+                                    "LAX",
+                                    "Los Angeles"
+                                ],
+                                "number_of_rooms": [
+                                    "2"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Hotels"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "ReserveHotel"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveHotel"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_3",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Should I go ahead and book it?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_3",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveHotel",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "hotel_name": [
+                                    "Amsterdam Hostel San Francisco"
+                                ],
+                                "location": [
+                                    "San Francisco"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "ReserveHotel"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveHotel"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Hotels"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "REQUEST",
+                                "canonical_values": [],
+                                "slot": "group_size",
+                                "values": []
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "departure_date",
+                                "values": []
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "departure_time",
+                                "values": []
+                            }
+                        ],
+                        "service": "Buses_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "How many tickets? Do you know when you'd like to leave?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-11"
+                                ],
+                                "slot": "departure_date",
+                                "values": [
+                                    "11th of March"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "10:15"
+                                ],
+                                "slot": "departure_time",
+                                "values": [
+                                    "10:15 in the morning"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "4"
+                                ],
+                                "slot": "group_size",
+                                "values": [
+                                    "4"
+                                ]
+                            }
+                        ],
+                        "service": "Buses_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 59,
+                                "slot": "departure_date",
+                                "start": 46
+                            },
+                            {
+                                "exclusive_end": 83,
+                                "slot": "departure_time",
+                                "start": 63
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "BuyBusTicket",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "departure_date": [
+                                    "11th of March"
+                                ],
+                                "departure_time": [
+                                    "10:15 in the morning"
+                                ],
+                                "destination": [
+                                    "San Francisco"
+                                ],
+                                "group_size": [
+                                    "4"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "This is for 4 people. We want to leave on the [NON UNDERSTANDING] at [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "departure_time",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-11"
+                                ],
+                                "slot": "departure_date",
+                                "values": [
+                                    "11th of March"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "4"
+                                ],
+                                "slot": "group_size",
+                                "values": [
+                                    "4"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Hotels"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Fresno"
+                                ],
+                                "slot": "origin",
+                                "values": [
+                                    "Fresno"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "destination",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2019-03-11"
+                                ],
+                                "slot": "departure_date",
+                                "values": [
+                                    "March 11th"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "10:15"
+                                ],
+                                "slot": "departure_time",
+                                "values": [
+                                    "10:15 am"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "3"
+                                ],
+                                "slot": "group_size",
+                                "values": [
+                                    "3"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Economy"
+                                ],
+                                "slot": "fare_type",
+                                "values": [
+                                    "Economy"
+                                ]
+                            }
+                        ],
+                        "service": "Buses_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 84,
+                                "slot": "origin",
+                                "start": 78
+                            },
+                            {
+                                "exclusive_end": 101,
+                                "slot": "destination",
+                                "start": 88
+                            },
+                            {
+                                "exclusive_end": 132,
+                                "slot": "departure_date",
+                                "start": 122
+                            },
+                            {
+                                "exclusive_end": 144,
+                                "slot": "departure_time",
+                                "start": 136
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Please confirm. You're reserving economy tickets for 3 people on the bus from Fresno to San Francisco. This bus leaves on March 11th at 10:15 am."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Buses_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "BuyBusTicket",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "departure_date": [
+                                    "11th of March",
+                                    "March 11th"
+                                ],
+                                "departure_time": [
+                                    "10:15 am",
+                                    "10:15 in the morning"
+                                ],
+                                "destination": [
+                                    "San Francisco"
+                                ],
+                                "fare_type": [
+                                    "Economy"
+                                ],
+                                "group_size": [
+                                    "3"
+                                ],
+                                "origin": [
+                                    "Fresno",
+                                    "Fresno, CA"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "3"
+                                ],
+                                "slot": "group_size",
+                                "values": [
+                                    "3"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

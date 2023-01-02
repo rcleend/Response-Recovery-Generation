@@ -1,0 +1,306 @@
+[
+    {
+        "services": [
+            "Movies"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "Ad Astra",
+                                    "Brittany Runs a Marathon",
+                                    "Fiddler: A Miracle of Miracles"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "Ad Astra",
+                                    "Brittany Runs a Marathon",
+                                    "Fiddler: A Miracle of Miracles"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_COUNT",
+                                "canonical_values": [
+                                    "10"
+                                ],
+                                "slot": "count",
+                                "values": [
+                                    "10"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "service_call": {
+                            "method": "FindMovies",
+                            "parameters": {
+                                "location": "San Francisco"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "genre": "Sci-fi",
+                                "location": "San Francisco",
+                                "movie_name": "Ad Astra",
+                                "price": "10",
+                                "show_type": "regular",
+                                "street_address": "1881 Post Street",
+                                "theater_name": "AMC Kabuki 8"
+                            },
+                            {
+                                "genre": "Drama",
+                                "location": "San Francisco",
+                                "movie_name": "Brittany Runs a Marathon",
+                                "price": "13",
+                                "show_type": "3d",
+                                "street_address": "1881 Post Street",
+                                "theater_name": "AMC Kabuki 8"
+                            },
+                            {
+                                "genre": "Documentary",
+                                "location": "San Francisco",
+                                "movie_name": "Fiddler: A Miracle of Miracles",
+                                "price": "13",
+                                "show_type": "imax",
+                                "street_address": "2221",
+                                "theater_name": "Landmark's Clay Theatre"
+                            },
+                            {
+                                "genre": "Comedy-drama",
+                                "location": "San Francisco",
+                                "movie_name": "Give Me Liberty",
+                                "price": "14",
+                                "show_type": "regular",
+                                "street_address": "3117 16th Street",
+                                "theater_name": "Roxie Theater"
+                            },
+                            {
+                                "genre": "Action",
+                                "location": "San Francisco",
+                                "movie_name": "Hobbs and Shaw",
+                                "price": "11",
+                                "show_type": "regular",
+                                "street_address": "135 4th Street Suite 3000",
+                                "theater_name": "AMC Metreon 16"
+                            },
+                            {
+                                "genre": "Drama",
+                                "location": "San Francisco",
+                                "movie_name": "Hustlers",
+                                "price": "12",
+                                "show_type": "regular",
+                                "street_address": "1881 Post Street",
+                                "theater_name": "AMC Kabuki 8"
+                            },
+                            {
+                                "genre": "Supernatural",
+                                "location": "San Francisco",
+                                "movie_name": "IT Chapter Two",
+                                "price": "10",
+                                "show_type": "regular",
+                                "street_address": "1881 Post Street",
+                                "theater_name": "AMC Kabuki 8"
+                            },
+                            {
+                                "genre": "Horror",
+                                "location": "San Francisco",
+                                "movie_name": "In Fabric",
+                                "price": "7",
+                                "show_type": "regular",
+                                "street_address": "3117 16th Street",
+                                "theater_name": "Roxie Theater"
+                            },
+                            {
+                                "genre": "Fantasy",
+                                "location": "San Francisco",
+                                "movie_name": "Labyrinth",
+                                "price": "14",
+                                "show_type": "regular",
+                                "street_address": "3117 16th Street",
+                                "theater_name": "Roxie Theater"
+                            },
+                            {
+                                "genre": "Drama",
+                                "location": "San Francisco",
+                                "movie_name": "Live Flesh",
+                                "price": "12",
+                                "show_type": "regular",
+                                "street_address": "2550 Mission Street",
+                                "theater_name": "Alamo Drafthouse Cinema"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 55,
+                                "slot": "movie_name",
+                                "start": 47
+                            },
+                            {
+                                "exclusive_end": 81,
+                                "slot": "movie_name",
+                                "start": 57
+                            },
+                            {
+                                "exclusive_end": 116,
+                                "slot": "movie_name",
+                                "start": 86
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "I found 10 movies that you may like. How about Ad Astra, Brittany Runs a Marathon, or Fiddler: A Miracle of Miracles?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "SELECT",
+                                "canonical_values": [
+                                    "Brittany Runs a Marathon"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "Brittany Runs a Marathon"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 24,
+                                "slot": "movie_name",
+                                "start": 0
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindMovies",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "San Francisco"
+                                ],
+                                "movie_name": [
+                                    "Brittany Runs a Marathon"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING] would be perfect."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "Ad Astra",
+                                    "Brittany Runs a Marathon",
+                                    "Fiddler: A Miracle of Miracles"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "Ad Astra",
+                                    "Brittany Runs a Marathon",
+                                    "Fiddler: A Miracle of Miracles"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Movies"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "BuyMovieTickets"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BuyMovieTickets"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Do you want to buy tickets?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "SFO"
+                                ],
+                                "movie_name": [
+                                    "Fiddler",
+                                    "Fiddler: A Miracle of Miracles"
+                                ],
+                                "show_type": [
+                                    "regular"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "BuyMovieTickets"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BuyMovieTickets"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

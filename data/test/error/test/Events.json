@@ -1,0 +1,175 @@
+[
+    {
+        "services": [
+            "Events"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "BookHouse"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BookHouse"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Do you want to make a reservation?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "has_laundry_service": [
+                                    "True"
+                                ],
+                                "number_of_adults": [
+                                    "4"
+                                ],
+                                "rating": [
+                                    "4.5"
+                                ],
+                                "where_to": [
+                                    "Seattle, WA"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Hotels_2",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [
+                                    "you would like me to make a reservation"
+                                ],
+                                "slot": "DRP",
+                                "values": [
+                                    "you would like me to make a reservation"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Right now I am trying to figure out if Would you like me to make a reservation for this house?"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Events"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Anything else I can do for you?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "THANK_YOU",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "has_laundry_service": [
+                                    "True"
+                                ],
+                                "number_of_adults": [
+                                    "4"
+                                ],
+                                "rating": [
+                                    "4.5"
+                                ],
+                                "where_to": [
+                                    "Seattle, WA"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Hotels_2",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "MOVE",
+                                "values": [
+                                    "book restaurant",
+                                    "book hotel room"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, I didn't catch that. Would you perhaps like to book a restaurant or another hotel room?"
+            }
+        ]
+    }
+]
