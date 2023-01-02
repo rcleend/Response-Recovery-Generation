@@ -1,0 +1,708 @@
+[
+    {
+        "services": [
+            "Music"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "ReserveHotel"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveHotel"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Shall I book you a room?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "destination": [
+                                    "Sacramento"
+                                ],
+                                "hotel_name": [
+                                    "Best Western Plus Sutter House"
+                                ],
+                                "number_of_rooms": [
+                                    "1"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "ReserveHotel"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveHotel"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Music"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Do you need more help?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-05"
+                                ],
+                                "slot": "leaving_date",
+                                "values": [
+                                    "5th of March"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Fresno"
+                                ],
+                                "slot": "from_location",
+                                "values": [
+                                    "Fresno, CA"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "travelers",
+                                "values": [
+                                    "1"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "FindBus"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "FindBus"
+                                ]
+                            }
+                        ],
+                        "service": "Buses_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 65,
+                                "slot": "leaving_date",
+                                "start": 53
+                            },
+                            {
+                                "exclusive_end": 45,
+                                "slot": "from_location",
+                                "start": 35
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindBus",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "from_location": [
+                                    "Fresno, CA"
+                                ],
+                                "leaving_date": [
+                                    "5th of March"
+                                ],
+                                "to_location": [
+                                    "Sacramento"
+                                ],
+                                "travelers": [
+                                    "1"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-05"
+                                ],
+                                "slot": "leaving_date",
+                                "values": [
+                                    "5th of March"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Fresno"
+                                ],
+                                "slot": "from_location",
+                                "values": [
+                                    "Fresno, CA"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "travelers",
+                                "values": [
+                                    "1"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "FindBus"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "FindBus"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Music"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Best Western Plus Sutter House"
+                                ],
+                                "slot": "hotel_name",
+                                "values": [
+                                    "Best Western Plus Sutter House"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "2019-03-08"
+                                ],
+                                "slot": "check_in_date",
+                                "values": [
+                                    "March 8th"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "3"
+                                ],
+                                "slot": "number_of_days",
+                                "values": [
+                                    "3"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Sacramento"
+                                ],
+                                "slot": "destination",
+                                "values": [
+                                    "Sacramento"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "number_of_rooms",
+                                "values": [
+                                    "1"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 60,
+                                "slot": "hotel_name",
+                                "start": 30
+                            },
+                            {
+                                "exclusive_end": 93,
+                                "slot": "check_in_date",
+                                "start": 84
+                            },
+                            {
+                                "exclusive_end": 21,
+                                "slot": "number_of_days",
+                                "start": 20
+                            },
+                            {
+                                "exclusive_end": 74,
+                                "slot": "destination",
+                                "start": 64
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "You want 1 room for 3 days at Best Western Plus Sutter House in Sacramento starting March 8th, correct?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "street_address",
+                                "values": []
+                            },
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveHotel",
+                            "requested_slots": [
+                                "street_address"
+                            ],
+                            "slot_values": {
+                                "check_in_date": [
+                                    "8th of March",
+                                    "March 8th"
+                                ],
+                                "destination": [
+                                    "Sacramento"
+                                ],
+                                "hotel_name": [
+                                    "Best Western Plus Sutter House"
+                                ],
+                                "number_of_days": [
+                                    "3"
+                                ],
+                                "number_of_rooms": [
+                                    "1"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "2019-03-08"
+                                ],
+                                "slot": "check_in_date",
+                                "values": [
+                                    "March 8th"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "street_address",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Music"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "destination",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "What city do you want to stay in?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Sacramento"
+                                ],
+                                "slot": "destination",
+                                "values": [
+                                    "Sacramento"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 28,
+                                "slot": "destination",
+                                "start": 18
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "SearchHotel",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "destination": [
+                                    "Sacramento"
+                                ],
+                                "number_of_rooms": [
+                                    "1"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I want to stay in [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "destination",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Music"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "OFFER",
+                                "canonical_values": [
+                                    "Best Western Plus Sutter House"
+                                ],
+                                "slot": "hotel_name",
+                                "values": [
+                                    "Best Western Plus Sutter House"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "star_rating",
+                                "values": [
+                                    "1"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_COUNT",
+                                "canonical_values": [
+                                    "10"
+                                ],
+                                "slot": "count",
+                                "values": [
+                                    "10"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "service_call": {
+                            "method": "SearchHotel",
+                            "parameters": {
+                                "destination": "Sacramento",
+                                "number_of_rooms": "1"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Best Western Plus Sutter House",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-441-1314",
+                                "price_per_night": "64",
+                                "star_rating": "1",
+                                "street_address": "1100 H Street"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Courtyard By Marriott Sacramento Midtown",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-455-6800",
+                                "price_per_night": "156",
+                                "star_rating": "3",
+                                "street_address": "4422 Y Street"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Doubletree By Hilton Hotel Sacramento",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-929-8855",
+                                "price_per_night": "114",
+                                "star_rating": "3",
+                                "street_address": "2001 Point West Way"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Embassy Suites By Hilton Sacramento Riverfront Promenade",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-326-5000",
+                                "price_per_night": "306",
+                                "star_rating": "3",
+                                "street_address": "100 Capitol Mall"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Fairfield Inn By Marriott Sacramento Cal Expo",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-920-5300",
+                                "price_per_night": "192",
+                                "star_rating": "2",
+                                "street_address": "1780 Tribute Road"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Four Points By Sheraton Sacramento International Airport",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-263-9000",
+                                "price_per_night": "102",
+                                "star_rating": "3",
+                                "street_address": "4900 Duckhorn Drive"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Hilton Garden Inn Sacramento/South Natomas",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-568-5400",
+                                "price_per_night": "180",
+                                "star_rating": "3",
+                                "street_address": "2540 Venture Oaks Way"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Hilton Sacramento Arden West",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-922-4700",
+                                "price_per_night": "60",
+                                "star_rating": "3",
+                                "street_address": "2200 Harvard Street"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Holiday Inn Express Sacramento Convention Center",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-444-4436",
+                                "price_per_night": "279",
+                                "star_rating": "3",
+                                "street_address": "728 16th Street"
+                            },
+                            {
+                                "destination": "Sacramento",
+                                "has_wifi": "True",
+                                "hotel_name": "Holiday Inn Sacramento Downtown - Arena",
+                                "number_of_rooms": "1",
+                                "phone_number": "+1 916-446-0100",
+                                "price_per_night": "180",
+                                "star_rating": "3",
+                                "street_address": "300 J Street"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 58,
+                                "slot": "hotel_name",
+                                "start": 28
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Search revealed 10 results. Best Western Plus Sutter House is a 1 star place."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "SELECT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "SearchHotel",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "destination": [
+                                    "Sacramento"
+                                ],
+                                "hotel_name": [
+                                    "Best Western Plus Sutter House"
+                                ],
+                                "number_of_rooms": [
+                                    "1"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "star_rating",
+                                "values": [
+                                    "1"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

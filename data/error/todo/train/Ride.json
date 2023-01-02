@@ -1,0 +1,621 @@
+[
+    {
+        "services": [
+            "Ride"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "601 Van Ness Avenue"
+                                ],
+                                "slot": "destination",
+                                "values": [
+                                    "601 Van Ness Avenue"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "number_of_seats",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Luxury"
+                                ],
+                                "slot": "ride_type",
+                                "values": [
+                                    "Luxury"
+                                ]
+                            }
+                        ],
+                        "service": "RideSharing_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 61,
+                                "slot": "destination",
+                                "start": 42
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Okay, you want a luxury cab ride for 2 to 601 Van Ness Avenue?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "RideSharing_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "GetRide",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "destination": [
+                                    "601 Van Ness Avenue"
+                                ],
+                                "number_of_seats": [
+                                    "2"
+                                ],
+                                "ride_type": [
+                                    "Luxury"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "601 Van Ness Avenue"
+                                ],
+                                "slot": "destination",
+                                "values": [
+                                    "601 Van Ness Avenue"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Ride"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "2019-03-07"
+                                ],
+                                "slot": "show_date",
+                                "values": [
+                                    "March 7th"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 12,
+                                "slot": "show_date",
+                                "start": 3
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "On March 7th?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "GetTimesForMovie",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "Campbell"
+                                ],
+                                "movie_name": [
+                                    "Dumbo"
+                                ],
+                                "show_date": [
+                                    "March 7th"
+                                ],
+                                "show_type": [
+                                    "imax"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "2019-03-07"
+                                ],
+                                "slot": "show_date",
+                                "values": [
+                                    "March 7th"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Ride"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "RideSharing_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Anything else for me?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "THANK_YOU",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "RideSharing_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "destination": [
+                                    "33 South Central Avenue"
+                                ],
+                                "number_of_seats": [
+                                    "2"
+                                ],
+                                "ride_type": [
+                                    "Luxury"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Ride"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Should I reserve a table?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Rheem Theatre"
+                                ],
+                                "slot": "theater_name",
+                                "values": [
+                                    "Rheem Theatre"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-03"
+                                ],
+                                "slot": "show_date",
+                                "values": [
+                                    "Sunday this week"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_INTENT",
+                                "canonical_values": [
+                                    "GetTimesForMovie"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "GetTimesForMovie"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 83,
+                                "slot": "theater_name",
+                                "start": 70
+                            },
+                            {
+                                "exclusive_end": 62,
+                                "slot": "show_date",
+                                "start": 46
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "GetTimesForMovie",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "genre": [
+                                    "suspense"
+                                ],
+                                "location": [
+                                    "Moraga"
+                                ],
+                                "movie_name": [
+                                    "Hotel Mumbai"
+                                ],
+                                "show_date": [
+                                    "Sunday this week"
+                                ],
+                                "show_type": [
+                                    "regular"
+                                ],
+                                "theater_name": [
+                                    "Rheem Theatre"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "Moraga"
+                                ],
+                                "cuisine": [
+                                    "pizza"
+                                ],
+                                "price_range": [
+                                    "moderate"
+                                ],
+                                "restaurant_name": [
+                                    "La Finestra Ristorante"
+                                ],
+                                "serves_alcohol": [
+                                    "True"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "Not now. When is the movie available to watch Sunday this week at the Rheem Theatre?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Rheem Theatre"
+                                ],
+                                "slot": "theater_name",
+                                "values": [
+                                    "Rheem Theatre"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-03"
+                                ],
+                                "slot": "show_date",
+                                "values": [
+                                    "Sunday this week"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Ride"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "JT LeRoy",
+                                    "Penguin Highway",
+                                    "Supa Modo"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "JT LeRoy",
+                                    "Penguin Highway",
+                                    "Supa Modo"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "service_call": {
+                            "method": "FindMovies",
+                            "parameters": {
+                                "location": "San Francisco",
+                                "theater_name": "Roxie Theater"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "genre": "Biographical",
+                                "location": "San Francisco",
+                                "movie_name": "JT LeRoy",
+                                "price": "16",
+                                "show_type": "regular",
+                                "street_address": "3117 16th St",
+                                "theater_name": "Roxie Theater"
+                            },
+                            {
+                                "genre": "Fantasy",
+                                "location": "San Francisco",
+                                "movie_name": "Penguin Highway",
+                                "price": "15",
+                                "show_type": "3d",
+                                "street_address": "3117 16th St",
+                                "theater_name": "Roxie Theater"
+                            },
+                            {
+                                "genre": "Drama",
+                                "location": "San Francisco",
+                                "movie_name": "Supa Modo",
+                                "price": "20",
+                                "show_type": "imax",
+                                "street_address": "3117 16th St",
+                                "theater_name": "Roxie Theater"
+                            },
+                            {
+                                "genre": "Drama",
+                                "location": "San Francisco",
+                                "movie_name": "The Innocent",
+                                "price": "18",
+                                "show_type": "regular",
+                                "street_address": "3117 16th St",
+                                "theater_name": "Roxie Theater"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 50,
+                                "slot": "movie_name",
+                                "start": 42
+                            },
+                            {
+                                "exclusive_end": 67,
+                                "slot": "movie_name",
+                                "start": 52
+                            },
+                            {
+                                "exclusive_end": 82,
+                                "slot": "movie_name",
+                                "start": 73
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Ok, it looks like people are recommending JT LeRoy, Penguin Highway, and Supa Modo. Any of those interest you?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "SELECT",
+                                "canonical_values": [
+                                    "JT LeRoy"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "JT LeRoy"
+                                ]
+                            }
+                        ],
+                        "service": "Movies_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 8,
+                                "slot": "movie_name",
+                                "start": 0
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindMovies",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "location": [
+                                    "San Fran"
+                                ],
+                                "movie_name": [
+                                    "JT LeRoy"
+                                ],
+                                "theater_name": [
+                                    "Roxie Theater"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING] sounds good."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [
+                                    "JT LeRoy",
+                                    "Penguin Highway",
+                                    "Supa Modo"
+                                ],
+                                "slot": "movie_name",
+                                "values": [
+                                    "JT LeRoy",
+                                    "Penguin Highway",
+                                    "Supa Modo"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

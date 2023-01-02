@@ -1,0 +1,275 @@
+[
+    {
+        "services": [
+            "Restaurant"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [],
+                                "slot": "time",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "What time works best for you?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "19:00"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "evening 7"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 35,
+                                "slot": "time",
+                                "start": 26
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "category": [
+                                    "Italian"
+                                ],
+                                "location": [
+                                    "Campbell"
+                                ],
+                                "price_range": [
+                                    "dontcare"
+                                ],
+                                "restaurant_name": [
+                                    "A Bellagio Italian Restaurant"
+                                ],
+                                "time": [
+                                    "evening 7"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I'd like something around [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [],
+                                "slot": "time",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Restaurant"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "A Bellagio Italian Restaurant"
+                                ],
+                                "slot": "restaurant_name",
+                                "values": [
+                                    "A Bellagio Italian Restaurant"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Campbell"
+                                ],
+                                "slot": "location",
+                                "values": [
+                                    "Campbell"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "19:00"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "7 pm"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "number_of_seats",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2019-03-01"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 1st"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 57,
+                                "slot": "restaurant_name",
+                                "start": 28
+                            },
+                            {
+                                "exclusive_end": 69,
+                                "slot": "location",
+                                "start": 61
+                            },
+                            {
+                                "exclusive_end": 90,
+                                "slot": "time",
+                                "start": 86
+                            },
+                            {
+                                "exclusive_end": 82,
+                                "slot": "date",
+                                "start": 73
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "You'd like a table for 2 at A Bellagio Italian Restaurant in Campbell on March 1st at 7 pm. Is that correct?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "rating",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "has_seating_outdoors",
+                                "values": []
+                            },
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [
+                                "has_seating_outdoors",
+                                "rating"
+                            ],
+                            "slot_values": {
+                                "category": [
+                                    "Italian"
+                                ],
+                                "date": [
+                                    "March 1st"
+                                ],
+                                "location": [
+                                    "Campbell"
+                                ],
+                                "number_of_seats": [
+                                    "2"
+                                ],
+                                "price_range": [
+                                    "dontcare"
+                                ],
+                                "restaurant_name": [
+                                    "A Bellagio Italian Restaurant"
+                                ],
+                                "time": [
+                                    "7 pm",
+                                    "evening 7"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "number_of_seats",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "rating",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "has_seating_outdoors",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

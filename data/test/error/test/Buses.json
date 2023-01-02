@@ -1,0 +1,307 @@
+[
+    {
+        "services": [
+            "Buses"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "from_city",
+                                "values": []
+                            }
+                        ],
+                        "service": "Buses_3",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Yes, I can do that. Where are you leaving from?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Fresno"
+                                ],
+                                "slot": "from_city",
+                                "values": [
+                                    "Fresno, CA"
+                                ]
+                            }
+                        ],
+                        "service": "Buses_3",
+                        "slots": [
+                            {
+                                "exclusive_end": 33,
+                                "slot": "from_city",
+                                "start": 23
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindBus",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "from_city": [
+                                    "Fresno, CA"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I will be leaving from [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Buses_3",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "AREP",
+                                "values": [
+                                    "city of your departure"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, I didn't catch that. Can you please repeat the city of your departure?"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Buses"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "Fresno"
+                                ],
+                                "slot": "from_city",
+                                "values": [
+                                    "Fresno"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Sacramento"
+                                ],
+                                "slot": "to_city",
+                                "values": [
+                                    "Sacramento"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2019-03-12"
+                                ],
+                                "slot": "departure_date",
+                                "values": [
+                                    "March 12th"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "06:20"
+                                ],
+                                "slot": "departure_time",
+                                "values": [
+                                    "6:20 am"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "3"
+                                ],
+                                "slot": "num_passengers",
+                                "values": [
+                                    "3"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "False"
+                                ],
+                                "slot": "additional_luggage",
+                                "values": [
+                                    "False"
+                                ]
+                            }
+                        ],
+                        "service": "Buses_3",
+                        "slots": [
+                            {
+                                "exclusive_end": 94,
+                                "slot": "from_city",
+                                "start": 88
+                            },
+                            {
+                                "exclusive_end": 108,
+                                "slot": "to_city",
+                                "start": 98
+                            },
+                            {
+                                "exclusive_end": 122,
+                                "slot": "departure_date",
+                                "start": 112
+                            },
+                            {
+                                "exclusive_end": 154,
+                                "slot": "departure_time",
+                                "start": 147
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Please confirm the following details: You would like 3 tickets for the bus leaving from Fresno to Sacramento on March 12th. The bus will depart at 6:20 am. No extra luggage in this trip."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "from_station",
+                                "values": []
+                            },
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Buses_3",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "BuyBusTicket",
+                            "requested_slots": [
+                                "from_station"
+                            ],
+                            "slot_values": {
+                                "additional_luggage": [
+                                    "False"
+                                ],
+                                "departure_date": [
+                                    "12th of March",
+                                    "March 12th"
+                                ],
+                                "departure_time": [
+                                    "6:20 am"
+                                ],
+                                "from_city": [
+                                    "Fresno",
+                                    "Fresno, CA"
+                                ],
+                                "num_passengers": [
+                                    "3"
+                                ],
+                                "to_city": [
+                                    "Sacramento",
+                                    "Sacramento, CA"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "That all sounds good to me, but I would like to depart from [NON UNDERSTANDING] instead"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Buses_3",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [
+                                    "Where are you leaving from?"
+                                ],
+                                "slot": "RP",
+                                "values": [
+                                    "Where are you leaving from?"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Sacramento"
+                                ],
+                                "slot": "to_city",
+                                "values": [
+                                    "Sacramento"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2019-03-12"
+                                ],
+                                "slot": "departure_date",
+                                "values": [
+                                    "March 12th"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "06:20"
+                                ],
+                                "slot": "departure_time",
+                                "values": [
+                                    "6:20 am"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "3"
+                                ],
+                                "slot": "num_passengers",
+                                "values": [
+                                    "3"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "False"
+                                ],
+                                "slot": "additional_luggage",
+                                "values": [
+                                    "False"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, I didn't fully catch that. You would like 3 tickets for the bus leaving to Sacramento on March 12th. The bus will depart at 6:20 am. No extra luggage in this trip. Where are you leaving from?"
+            }
+        ]
+    }
+]

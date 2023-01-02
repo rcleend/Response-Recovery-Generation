@@ -1,0 +1,162 @@
+[
+    {
+        "services": [
+            "Hotels"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "where_to",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Which city please?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "London"
+                                ],
+                                "slot": "where_to",
+                                "values": [
+                                    "London"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 19,
+                                "slot": "where_to",
+                                "start": 13
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "SearchHouse",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "where_to": [
+                                    "London"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I'm going to [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "where_to",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Hotels"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "BookHouse"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BookHouse"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Shall I make the reservation for the house?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "GOODBYE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "where_to": [
+                                    "Paris"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "BookHouse"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BookHouse"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

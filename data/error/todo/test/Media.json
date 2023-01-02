@@ -1,0 +1,218 @@
+[
+    {
+        "services": [
+            "Media"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "location",
+                                "values": []
+                            }
+                        ],
+                        "service": "Travel_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "What location should I search?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "True"
+                                ],
+                                "slot": "free_entry",
+                                "values": [
+                                    "True"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "location",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            }
+                        ],
+                        "service": "Travel_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 31,
+                                "slot": "location",
+                                "start": 18
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindAttractions",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "free_entry": [
+                                    "True"
+                                ],
+                                "good_for_kids": [
+                                    "True"
+                                ],
+                                "location": [
+                                    "San Francisco"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "Find something in [NON UNDERSTANDING], preferably without an entry fee."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [],
+                                "slot": "location",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "True"
+                                ],
+                                "slot": "free_entry",
+                                "values": [
+                                    "True"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Media"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "Midsommar"
+                                ],
+                                "slot": "title",
+                                "values": [
+                                    "Midsommar"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "French"
+                                ],
+                                "slot": "subtitle_language",
+                                "values": [
+                                    "French"
+                                ]
+                            }
+                        ],
+                        "service": "Media_3",
+                        "slots": [
+                            {
+                                "exclusive_end": 43,
+                                "slot": "title",
+                                "start": 34
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Confirming that you want to watch Midsommar with French subtitles?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "starring",
+                                "values": []
+                            },
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Media_3",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "PlayMovie",
+                            "requested_slots": [
+                                "starring"
+                            ],
+                            "slot_values": {
+                                "genre": [
+                                    "Scary"
+                                ],
+                                "subtitle_language": [
+                                    "French"
+                                ],
+                                "title": [
+                                    "Midsommar"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "French"
+                                ],
+                                "slot": "subtitle_language",
+                                "values": [
+                                    "French"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "starring",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]

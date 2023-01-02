@@ -1,0 +1,703 @@
+[
+    {
+        "services": [
+            "Flights"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Flights_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Can I help you with anything else?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NEGATE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "THANK_YOU",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Flights_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "NONE",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "airlines": [
+                                    "Southwest Airlines"
+                                ],
+                                "departure_date": [
+                                    "11th of March"
+                                ],
+                                "destination": [
+                                    "Phoenix, AZ"
+                                ],
+                                "origin": [
+                                    "Atlanta"
+                                ],
+                                "passengers": [
+                                    "1"
+                                ],
+                                "seating_class": [
+                                    "Premium Economy"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Flights_2",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "DRP",
+                                "values": [
+                                    "Can I help you with something else?"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "I'm sorry, I don't think I understood you correctly. Can I help you with anything else?"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Flights"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Toronto"
+                                ],
+                                "slot": "origin_city",
+                                "values": [
+                                    "Toronto"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "San Diego"
+                                ],
+                                "slot": "destination_city",
+                                "values": [
+                                    "San Diego"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Delta Airlines"
+                                ],
+                                "slot": "airlines",
+                                "values": [
+                                    "Delta Airlines"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "2019-03-06"
+                                ],
+                                "slot": "departure_date",
+                                "values": [
+                                    "next Wednesday"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "passengers",
+                                "values": [
+                                    "1"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Economy"
+                                ],
+                                "slot": "seating_class",
+                                "values": [
+                                    "Economy"
+                                ]
+                            }
+                        ],
+                        "service": "Flights_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 38,
+                                "slot": "origin_city",
+                                "start": 31
+                            },
+                            {
+                                "exclusive_end": 51,
+                                "slot": "destination_city",
+                                "start": 42
+                            },
+                            {
+                                "exclusive_end": 66,
+                                "slot": "departure_date",
+                                "start": 52
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "To verify: You want to go from Toronto to San Diego next Wednesday. You'd prefer Delta Airlines and you want 1 ticket in economy class."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Flights_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveOnewayFlight",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "airlines": [
+                                    "Delta Airlines"
+                                ],
+                                "departure_date": [
+                                    "6th of this month",
+                                    "next Wednesday"
+                                ],
+                                "destination_city": [
+                                    "SD",
+                                    "San Diego"
+                                ],
+                                "origin_city": [
+                                    "Toronto"
+                                ],
+                                "passengers": [
+                                    "1"
+                                ],
+                                "seating_class": [
+                                    "Economy"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Flights_1",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "TYCS",
+                                "values": [
+                                    "confirm flight",
+                                    "decline flight",
+                                    "ask for alternative"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, I didn't catch that. You can either confirm or decline this flight or ask for an alternative."
+            }
+        ]
+    },
+    {
+        "services": [
+            "Flights"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [
+                                    "ReserveOnewayFlight"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveOnewayFlight"
+                                ]
+                            }
+                        ],
+                        "service": "Flights_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Shall I book the tickets for you?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Flights_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveOnewayFlight",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "airlines": [
+                                    "Air France"
+                                ],
+                                "departure_date": [
+                                    "5th of this month"
+                                ],
+                                "destination_city": [
+                                    "Seattle"
+                                ],
+                                "origin_city": [
+                                    "Paris"
+                                ],
+                                "outbound_departure_time": [
+                                    "1:25 pm"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Flights_1",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "AREP",
+                                "values": [
+                                    "reserve the flight"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, can you please repeat if I should reserve the flight?"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Flights"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "REQUEST",
+                                "canonical_values": [],
+                                "slot": "destination",
+                                "values": []
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "origin",
+                                "values": []
+                            }
+                        ],
+                        "service": "Flights_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Where are you planning to go? Which city do you want to depart from?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Phoenix"
+                                ],
+                                "slot": "destination",
+                                "values": [
+                                    "Phoenix, AZ"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "passengers",
+                                "values": [
+                                    "1"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Seattle"
+                                ],
+                                "slot": "origin",
+                                "values": [
+                                    "Seattle, WA"
+                                ]
+                            }
+                        ],
+                        "service": "Flights_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 26,
+                                "slot": "destination",
+                                "start": 15
+                            },
+                            {
+                                "exclusive_end": 60,
+                                "slot": "origin",
+                                "start": 49
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "SearchOnewayFlight",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "destination": [
+                                    "Phoenix, AZ"
+                                ],
+                                "origin": [
+                                    "Seattle, WA"
+                                ],
+                                "passengers": [
+                                    "1"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I am flying to Phoenix, AZ. I want 1 ticket from [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Flights_1",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "RP",
+                                "values": [
+                                    "Which city do you want to depart from?"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Phoenix"
+                                ],
+                                "slot": "destination_city",
+                                "values": [
+                                    "Phoenix, AZ"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "passengers",
+                                "values": [
+                                    "1"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Okay, you want 1 ticket to Phoenix, AZ. Where are you flying from?"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Flights"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "OFFER",
+                                "canonical_values": [
+                                    "Alaska Airlines"
+                                ],
+                                "slot": "airlines",
+                                "values": [
+                                    "Alaska Airlines"
+                                ]
+                            },
+                            {
+                                "act": "OFFER",
+                                "canonical_values": [
+                                    "12:00"
+                                ],
+                                "slot": "outbound_departure_time",
+                                "values": [
+                                    "12 pm"
+                                ]
+                            },
+                            {
+                                "act": "OFFER",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "number_stops",
+                                "values": [
+                                    "1"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "237"
+                                ],
+                                "slot": "fare",
+                                "values": [
+                                    "$237"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_COUNT",
+                                "canonical_values": [
+                                    "4"
+                                ],
+                                "slot": "count",
+                                "values": [
+                                    "4"
+                                ]
+                            }
+                        ],
+                        "service": "Flights_2",
+                        "service_call": {
+                            "method": "SearchOnewayFlight",
+                            "parameters": {
+                                "departure_date": "2019-03-11",
+                                "destination": "Phoenix",
+                                "origin": "Seattle",
+                                "passengers": "1"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "airlines": "Alaska Airlines",
+                                "departure_date": "2019-03-11",
+                                "destination": "Phoenix",
+                                "destination_airport": "Sky Harbor International Airport",
+                                "fare": "237",
+                                "is_redeye": "False",
+                                "number_stops": "1",
+                                "origin": "Seattle",
+                                "origin_airport": "Seattle-Tacoma International Airport",
+                                "outbound_arrival_time": "16:22",
+                                "outbound_departure_time": "12:00",
+                                "passengers": "1",
+                                "seating_class": "Economy"
+                            },
+                            {
+                                "airlines": "American Airlines",
+                                "departure_date": "2019-03-11",
+                                "destination": "Phoenix",
+                                "destination_airport": "Sky Harbor International Airport",
+                                "fare": "218",
+                                "is_redeye": "False",
+                                "number_stops": "1",
+                                "origin": "Seattle",
+                                "origin_airport": "Seattle-Tacoma International Airport",
+                                "outbound_arrival_time": "13:38",
+                                "outbound_departure_time": "08:15",
+                                "passengers": "1",
+                                "seating_class": "Economy"
+                            },
+                            {
+                                "airlines": "Delta Airlines",
+                                "departure_date": "2019-03-11",
+                                "destination": "Phoenix",
+                                "destination_airport": "Sky Harbor International Airport",
+                                "fare": "254",
+                                "is_redeye": "False",
+                                "number_stops": "1",
+                                "origin": "Seattle",
+                                "origin_airport": "Seattle-Tacoma International Airport",
+                                "outbound_arrival_time": "13:38",
+                                "outbound_departure_time": "08:45",
+                                "passengers": "1",
+                                "seating_class": "Economy"
+                            },
+                            {
+                                "airlines": "United Airlines",
+                                "departure_date": "2019-03-11",
+                                "destination": "Phoenix",
+                                "destination_airport": "Sky Harbor International Airport",
+                                "fare": "244",
+                                "is_redeye": "False",
+                                "number_stops": "1",
+                                "origin": "Seattle",
+                                "origin_airport": "Seattle-Tacoma International Airport",
+                                "outbound_arrival_time": "23:38",
+                                "outbound_departure_time": "18:20",
+                                "passengers": "1",
+                                "seating_class": "Economy"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 99,
+                                "slot": "outbound_departure_time",
+                                "start": 94
+                            },
+                            {
+                                "exclusive_end": 144,
+                                "slot": "fare",
+                                "start": 140
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "I found 4 flights for you. Would you like to fly with Alaska Airlines. The flight takes off at 12 pm. The flight has 1 stop. The ticket cost $237."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Premium Economy"
+                                ],
+                                "slot": "seating_class",
+                                "values": [
+                                    "Premium Economy"
+                                ]
+                            },
+                            {
+                                "act": "REQUEST_ALTS",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Flights_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "SearchOnewayFlight",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "airlines": [
+                                    "dontcare"
+                                ],
+                                "departure_date": [
+                                    "11th of March"
+                                ],
+                                "destination": [
+                                    "Phoenix, AZ"
+                                ],
+                                "origin": [
+                                    "Seattle, WA"
+                                ],
+                                "passengers": [
+                                    "1"
+                                ],
+                                "seating_class": [
+                                    "Premium Economy"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Flights_2",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "TYCS",
+                                "values": [
+                                    "confirm flight",
+                                    "decline flight",
+                                    "ask for alternative"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry, I didn't catch that. You can either confirm or decline this flight or ask for an alternative."
+            }
+        ]
+    }
+]

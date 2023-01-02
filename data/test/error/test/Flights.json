@@ -1,0 +1,251 @@
+[
+    {
+        "services": [
+            "Flights"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Atlanta"
+                                ],
+                                "slot": "where_to",
+                                "values": [
+                                    "Atlanta"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "1"
+                                ],
+                                "slot": "number_of_adults",
+                                "values": [
+                                    "1"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2019-03-06"
+                                ],
+                                "slot": "check_in_date",
+                                "values": [
+                                    "March 6th"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "2019-03-13"
+                                ],
+                                "slot": "check_out_date",
+                                "values": [
+                                    "March 13th"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 48,
+                                "slot": "where_to",
+                                "start": 41
+                            },
+                            {
+                                "exclusive_end": 74,
+                                "slot": "check_in_date",
+                                "start": 65
+                            },
+                            {
+                                "exclusive_end": 102,
+                                "slot": "check_out_date",
+                                "start": 92
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "So you'd like to book it for 1 person in Atlanta and check in on March 6th and check out on March 13th. Is this correct?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-10"
+                                ],
+                                "slot": "check_out_date",
+                                "values": [
+                                    "10th of this month"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "number_of_adults",
+                                "values": [
+                                    "2"
+                                ]
+                            },
+                            {
+                                "act": "NEGATE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": [
+                            {
+                                "exclusive_end": 58,
+                                "slot": "check_out_date",
+                                "start": 40
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "BookHouse",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "check_in_date": [
+                                    "March 6th"
+                                ],
+                                "check_out_date": [
+                                    "10th of this month"
+                                ],
+                                "number_of_adults": [
+                                    "2"
+                                ],
+                                "where_to": [
+                                    "ATL",
+                                    "Atlanta"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "No, actually I want to check out on the [NON UNDERSTANDING] and there will be two people."
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Hotels_2",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [
+                                ],
+                                "slot": "AREP",
+                                "values": [
+                                    "check-out date"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "number_of_adults",
+                                "values": [
+                                    "2"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Okay, you want to book a flight for two people. Sorry, but can you repeat the check-out date?"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Flights"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "BookHouse"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "BookHouse"
+                                ]
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Do you want to reserve that house?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Hotels_2",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "BookHouse",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "has_laundry_service": [
+                                    "True"
+                                ],
+                                "rating": [
+                                    "4.5"
+                                ],
+                                "where_to": [
+                                    "Seattle, WA"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "service": "Hotels_2",
+                        "actions": [
+                            {
+                                "act": "ERROR",
+                                "canonical_values": [],
+                                "slot": "DRP",
+                                "values": [
+                                    "book the house"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry I didn't catch that. Right now I'm trying to find out if you would like to book the house?"
+            }
+        ]
+    }
+]

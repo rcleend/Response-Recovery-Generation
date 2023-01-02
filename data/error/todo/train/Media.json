@@ -1,0 +1,810 @@
+[
+    {
+        "services": [
+            "Media"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Do you want me to reserve a table here?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "AFFIRM_INTENT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "SF",
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "pasta"
+                                ],
+                                "price_range": [
+                                    "expensive"
+                                ],
+                                "restaurant_name": [
+                                    "Ala Romana"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_DRP",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Media"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "Ala Romana"
+                                ],
+                                "slot": "restaurant_name",
+                                "values": [
+                                    "Ala Romana"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "city",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "12:00"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "12 pm"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "2019-03-01"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 1st"
+                                ]
+                            },
+                            {
+                                "act": "CONFIRM",
+                                "canonical_values": [
+                                    "2"
+                                ],
+                                "slot": "party_size",
+                                "values": [
+                                    "2"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 73,
+                                "slot": "restaurant_name",
+                                "start": 63
+                            },
+                            {
+                                "exclusive_end": 98,
+                                "slot": "city",
+                                "start": 85
+                            },
+                            {
+                                "exclusive_end": 120,
+                                "slot": "time",
+                                "start": 115
+                            },
+                            {
+                                "exclusive_end": 111,
+                                "slot": "date",
+                                "start": 102
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Please confirm: You want me to reserve a table for 2 people at Ala Romana located in San Francisco on March 1st at 12 pm."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "has_live_music",
+                                "values": []
+                            },
+                            {
+                                "act": "AFFIRM",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [
+                                "has_live_music"
+                            ],
+                            "slot_values": {
+                                "city": [
+                                    "SF",
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "pasta"
+                                ],
+                                "date": [
+                                    "March 1st"
+                                ],
+                                "party_size": [
+                                    "2"
+                                ],
+                                "price_range": [
+                                    "expensive"
+                                ],
+                                "restaurant_name": [
+                                    "Ala Romana"
+                                ],
+                                "time": [
+                                    "12 pm",
+                                    "twelve pm"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_MOVE",
+                                "canonical_values": [
+                                    "2019-03-01"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 1st"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [],
+                                "slot": "has_live_music",
+                                "values": []
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Media"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "NOTIFY_FAILURE",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "service_call": {
+                            "method": "ReserveRestaurant",
+                            "parameters": {
+                                "city": "San Francisco",
+                                "date": "2019-03-05",
+                                "party_size": "1",
+                                "restaurant_name": "Arguello",
+                                "time": "16:30"
+                            }
+                        },
+                        "service_results": [],
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "Sorry the reservation is not done. Is there anything else I can help you with ?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-07"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 7th"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "3"
+                                ],
+                                "slot": "party_size",
+                                "values": [
+                                    "3"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "19:30"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "evening 7:30"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 36,
+                                "slot": "date",
+                                "start": 27
+                            },
+                            {
+                                "exclusive_end": 65,
+                                "slot": "time",
+                                "start": 53
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "ReserveRestaurant",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "San Fran",
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "Burrito"
+                                ],
+                                "date": [
+                                    "March 7th"
+                                ],
+                                "party_size": [
+                                    "3"
+                                ],
+                                "price_range": [
+                                    "moderate"
+                                ],
+                                "restaurant_name": [
+                                    "Arguello"
+                                ],
+                                "time": [
+                                    "evening 7:30"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_AREP",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "2019-03-07"
+                                ],
+                                "slot": "date",
+                                "values": [
+                                    "March 7th"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "3"
+                                ],
+                                "slot": "party_size",
+                                "values": [
+                                    "3"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "19:30"
+                                ],
+                                "slot": "time",
+                                "values": [
+                                    "evening 7:30"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "ReserveRestaurant"
+                                ],
+                                "slot": "intent",
+                                "values": [
+                                    "ReserveRestaurant"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Media"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "REQUEST",
+                                "canonical_values": [],
+                                "slot": "cuisine",
+                                "values": []
+                            },
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "city",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": []
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "What is your preferred category of food and the city?"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Italian"
+                                ],
+                                "slot": "cuisine",
+                                "values": [
+                                    "pasta"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "expensive"
+                                ],
+                                "slot": "price_range",
+                                "values": [
+                                    "expensive"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "city",
+                                "values": [
+                                    "SF"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [
+                            {
+                                "exclusive_end": 19,
+                                "slot": "cuisine",
+                                "start": 14
+                            },
+                            {
+                                "exclusive_end": 69,
+                                "slot": "city",
+                                "start": 67
+                            }
+                        ],
+                        "state": {
+                            "active_intent": "FindRestaurants",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "SF"
+                                ],
+                                "cuisine": [
+                                    "pasta"
+                                ],
+                                "price_range": [
+                                    "expensive"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "I prefer some pasta kind of food with above average priced food in [NON UNDERSTANDING]."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_RP",
+                                "canonical_values": [],
+                                "slot": "city",
+                                "values": []
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "Italian"
+                                ],
+                                "slot": "cuisine",
+                                "values": [
+                                    "pasta"
+                                ]
+                            },
+                            {
+                                "act": "INFORM",
+                                "canonical_values": [
+                                    "expensive"
+                                ],
+                                "slot": "price_range",
+                                "values": [
+                                    "expensive"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    },
+    {
+        "services": [
+            "Media"
+        ],
+        "turns": [
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "OFFER",
+                                "canonical_values": [
+                                    "Ala Romana"
+                                ],
+                                "slot": "restaurant_name",
+                                "values": [
+                                    "Ala Romana"
+                                ]
+                            },
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "city",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            },
+                            {
+                                "act": "INFORM_COUNT",
+                                "canonical_values": [
+                                    "10"
+                                ],
+                                "slot": "count",
+                                "values": [
+                                    "10"
+                                ]
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "service_call": {
+                            "method": "FindRestaurants",
+                            "parameters": {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "price_range": "expensive"
+                            }
+                        },
+                        "service_results": [
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-292-3699",
+                                "price_range": "expensive",
+                                "restaurant_name": "Ala Romana",
+                                "serves_alcohol": "True",
+                                "street_address": "1098 Jackson Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-416-6959",
+                                "price_range": "expensive",
+                                "restaurant_name": "Che Fico",
+                                "serves_alcohol": "False",
+                                "street_address": "838 Divisadero Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-362-6012",
+                                "price_range": "expensive",
+                                "restaurant_name": "Chiaroscuro",
+                                "serves_alcohol": "True",
+                                "street_address": "550 Washington Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-775-8508",
+                                "price_range": "expensive",
+                                "restaurant_name": "Cotogna",
+                                "serves_alcohol": "False",
+                                "street_address": "490 Pacific Avenue"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-981-4664",
+                                "price_range": "expensive",
+                                "restaurant_name": "Da Flora",
+                                "serves_alcohol": "False",
+                                "street_address": "701 Columbus Avenue"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "True",
+                                "phone_number": "415-986-1886",
+                                "price_range": "expensive",
+                                "restaurant_name": "Fior D'italia",
+                                "serves_alcohol": "True",
+                                "street_address": "2237 Mason Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-928-1983",
+                                "price_range": "expensive",
+                                "restaurant_name": "Frascati",
+                                "serves_alcohol": "False",
+                                "street_address": "1901 Hyde Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-550-8114",
+                                "price_range": "expensive",
+                                "restaurant_name": "La Ciccia",
+                                "serves_alcohol": "False",
+                                "street_address": "291 30th Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-863-6800",
+                                "price_range": "expensive",
+                                "restaurant_name": "Locanda",
+                                "serves_alcohol": "True",
+                                "street_address": "557 Valencia Street"
+                            },
+                            {
+                                "city": "San Francisco",
+                                "cuisine": "Italian",
+                                "has_live_music": "False",
+                                "phone_number": "415-421-4489",
+                                "price_range": "expensive",
+                                "restaurant_name": "North Beach Restaurant",
+                                "serves_alcohol": "False",
+                                "street_address": "1512 Stockton Street"
+                            }
+                        ],
+                        "slots": [
+                            {
+                                "exclusive_end": 50,
+                                "slot": "restaurant_name",
+                                "start": 40
+                            },
+                            {
+                                "exclusive_end": 75,
+                                "slot": "city",
+                                "start": 62
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "There are 10 restaurants. One is called Ala Romana located in San Francisco."
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "SELECT",
+                                "canonical_values": [],
+                                "slot": "",
+                                "values": []
+                            }
+                        ],
+                        "service": "Restaurants_1",
+                        "slots": [],
+                        "state": {
+                            "active_intent": "FindRestaurants",
+                            "requested_slots": [],
+                            "slot_values": {
+                                "city": [
+                                    "SF",
+                                    "San Francisco"
+                                ],
+                                "cuisine": [
+                                    "pasta"
+                                ],
+                                "price_range": [
+                                    "expensive"
+                                ],
+                                "restaurant_name": [
+                                    "Ala Romana"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "speaker": "USER",
+                "utterance": "[NON UNDERSTANDING]"
+            },
+            {
+                "frames": [
+                    {
+                        "actions": [
+                            {
+                                "act": "ERROR_TYCS",
+                                "canonical_values": [
+                                    "San Francisco"
+                                ],
+                                "slot": "city",
+                                "values": [
+                                    "San Francisco"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "speaker": "SYSTEM",
+                "utterance": "TODO"
+            }
+        ]
+    }
+]
