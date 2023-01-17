@@ -123,7 +123,7 @@ class TemplateUtteranceGenerator:
       The robot utterance corresponding to the action.
     """
     has_error_act = "ERROR" == action['act']
-    if has_error_act and service not in self._templates_for_service:
+    if has_error_act and "ERROR" not in self._templates_for_service:
         self._load_templates_for_service("ERROR")
     if service not in self._templates_for_service:
         self._load_templates_for_service(service)

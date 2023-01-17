@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e85ace00-f050-4e0b-bb3e-3bb885322501" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/t5/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/t5/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/t5/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/t5/trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t5/utterance_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/t5/utterance_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,8 @@
       <workItem from="1672398551867" duration="17277000" />
       <workItem from="1672650238460" duration="10441000" />
       <workItem from="1672666919646" duration="181000" />
-      <workItem from="1672667105607" duration="884000" />
+      <workItem from="1672667105607" duration="2204000" />
+      <workItem from="1673969286237" duration="1515000" />
     </task>
     <servers />
   </component>

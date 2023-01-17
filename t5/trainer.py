@@ -81,7 +81,7 @@ def validate(epoch, tokenizer, model, device, loader):
           generated_ids = model.generate(
               input_ids = ids,
               attention_mask = mask, 
-              max_length=model['MAX_TARGET_TEXT_LENGTH'], 
+              max_length=512,
               num_beams=4,
               repetition_penalty=2.5, 
               length_penalty=0.6, 
